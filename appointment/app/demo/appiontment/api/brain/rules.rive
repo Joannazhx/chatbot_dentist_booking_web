@@ -1,0 +1,108 @@
+! version = 2.0
+
++ hello bot
+- hi user!
+- hi,there :)
+- hello user
+- hi,bro
+- What's up,bro
+- yoyo,welcome there
+
++ how are you
+- I'm good,how about you?
+
++ where are you from
+- I'm from my country :)
+
++ my name is *
+- oh hey <star1>
+
++ i am [ happy | excited | trilled]
+- I am happy too for you
+
++ what is the weather in *
+- city=<star1>
+
+
+
++ start 
+- Which doctor dou you prefer ?\n
+^ you can answer me:\n
+^ I prefer [name of the docot]  or\n
+^ you can ask me:\n
+^ available dentists\n
+^ get [name of doctor] information\n
+
++ get * information
+- dentistinfro=<star1>\n
+^ Do you want to chioce <star1>?\n
+^ you can answer me:\n
+^ chioce [name of the docot]  or\n
+^ you can check other dentists' information or available dentists\n
+
++ i prefer * 
+- dentistinfro=<star1>\n
+^ Do you want to chioce <star1>?\n
+^ you can answer me:\n
+^ choice [name of the docot]  or\n
+^ you can check other dentists' information or available dentists\n
+
++ available dentists
+- dentists=\n
+^ Which doctor dou you prefer ? \n
+^ you can answer me : \n
+^ I prefer [name of the docot] / get [name of dentist] information to get more information or \n
+^ you can chioce doctor by saying: \n
+^ choice [name of dentist]
+
++ get * information
+- dentistinformation=<star1>\n 
+^ Do you want to chioce <star1>?\n
+^ you can answer me:\n
+^ chioce [name of the docot]  or\n
+^ you can check other dentists' information or available dentists\n
+
++ choice *
+- doctorchoice=<star1>\n
+^ You choiced doctor <star1>\n
+^ Now you need to choice a timeslot\n
+^ you can ask me:\n
+^ available dates\n
+^ available time of [date]\n
+^ check [time(15)] of [date(1004)] \n
+
++ available dates
+- availabledates=\n
+^ you can ask me:\n
+^ available time of [date(0904)]\n
+^ check [time(15)] of [date(0904)]\n
+
++ available time of *
+- availabledate=<star1> \n
+^ you can say:\n
+^ check [time(15)] of [date(0904)]\n
+^ [yourname] book [date] [time] 
+
++ check * of *
+- checktime=<star1>,checkdate=<star2>\n
+
++ * book * *
+- bookpatient=<star1>,bookdate=<star2>,booktime=<star3>\n
+^ you can say:\n
+^ confirm\n
+^ cancel\n
+
++ confirm 
+- confirm=
+
++ cancel
+- trycancel=
+
+
++ yes
+- cancel=
+
++ no 
+- Ok you can confirm book by saying : confirm
+
+

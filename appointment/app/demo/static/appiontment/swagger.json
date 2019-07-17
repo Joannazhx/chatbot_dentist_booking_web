@@ -1,0 +1,456 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1",
+    "title": "Dentist Reservation",
+    "description": "Assignment1 - Book an appiontment with a dentist",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "paths": {
+    "/chatbots": {
+      "post": {
+        "tags": [
+          "Chatbot"
+        ],
+        "summary": "bot interaction",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "bot interaction",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/messages"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "chat with bots",
+            "schema": {
+              "$ref": "#/definitions/messages"
+            }
+          },
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/timeslots/{id}": {
+      "get": {
+        "tags": [
+          "Timeslots"
+        ],
+        "summary": "Gets the avaliable dates of the specific doctor in next week",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "unique id represent the specific doctor",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successfully get all avialable dates",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "No such dentist"
+          }
+        }
+      }
+    },
+    "/timeslots/{id}/{date}": {
+      "get": {
+        "tags": [
+          "Timeslots"
+        ],
+        "summary": "Gets the avaliable timeslots in a specific date of the  dentist",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "unique id represent the specific doctor",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "date",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successfully get all avilable timeslots",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "No such dentist or date input wrong"
+          }
+        }
+      }
+    },
+    "/timeslots/{id}/{date}/{timeslot}": {
+      "get": {
+        "tags": [
+          "Timeslots"
+        ],
+        "summary": "check a timeslot avaliable or not",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "unique id represent the specific doctor",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "date",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "timeslot",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "checked",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "No such dentist or date input wrong or time wrong"
+          }
+        }
+      }
+    },
+    "/timeslots/{id}/{dates}/{timeslot}/{patient}/reserve": {
+      "post": {
+        "tags": [
+          "Timeslots"
+        ],
+        "summary": "reserve the avaliable timeslot in a specific date and dentist",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "unique id represent the specific doctor",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "dates",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "timeslot",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "patient",
+            "in": "path",
+            "description": "patient's name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful timeslot reserve",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "Booked by other patient"
+          }
+        }
+      }
+    },
+    "/timeslots/{id}/{dates}/{timeslot}/{patient}/cancel": {
+      "delete": {
+        "tags": [
+          "Timeslots"
+        ],
+        "summary": "cancel the booked timeslot in a specific date and dentist--change to avialable",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "unique id represent the specific doctor",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "dates",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "timeslot",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "patient",
+            "in": "path",
+            "description": "patient's name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful timeslot cancel",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "You not booked this time"
+          }
+        }
+      }
+    },
+    "/dentists": {
+      "get": {
+        "tags": [
+          "Dentist"
+        ],
+        "summary": "Get all dentists name",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful check information",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "Wrong"
+          }
+        }
+      }
+    },
+    "/dentists/{id}": {
+      "get": {
+        "tags": [
+          "Dentist"
+        ],
+        "summary": "Get all information of a dentist",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "unique id represent the specific doctor",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful check information",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/information"
+              }
+            }
+          },
+          "400": {
+            "description": "No such dentist"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "dentist": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Paediatric Dentistry"
+        },
+        "location": {
+          "type": "string",
+          "example": "Orthodontics"
+        },
+        "specialization": {
+          "type": "string",
+          "example": "Oral Surgery"
+        }
+      },
+      "xml": {
+        "name": "dentist"
+      }
+    },
+    "information": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Paediatric Dentistry"
+        },
+        "location": {
+          "type": "string",
+          "example": "Orthodontics"
+        },
+        "specialization": {
+          "type": "string",
+          "example": "Oral Surgery"
+        }
+      },
+      "xml": {
+        "name": "information"
+      }
+    },
+    "timeslot": {
+      "type": "object",
+      "properties": {
+        "hour": {
+          "type": "string",
+          "description": "1 hour timeslots from 9:00 AM to 5:00 PM",
+          "example": "15:00-16:00"
+        },
+        "status": {
+          "type": "string",
+          "description": "timeslot Status",
+          "enum": [
+            "booked",
+            "available"
+          ],
+          "default": "available"
+        },
+        "patient": {
+          "type": "string",
+          "example": "Alice",
+          "default": "None"
+        }
+      },
+      "xml": {
+        "name": "timeslot"
+      }
+    },
+    "dates": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "example": "06/04/2019"
+        },
+        "timeslots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/timeslot"
+          }
+        }
+      },
+      "xml": {
+        "name": "dates"
+      }
+    },
+    "appointments": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "information": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/dentist"
+          }
+        },
+        "timeslots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/dates"
+          }
+        }
+      },
+      "xml": {
+        "name": "appionts"
+      }
+    },
+    "messages": {
+      "type": "object",
+      "properties": {
+        "messges": {
+          "type": "string",
+          "example": "hello bot"
+        }
+      },
+      "xml": {
+        "name": "messages"
+      }
+    }
+  },
+  "basePath": "/appiontment"
+}
