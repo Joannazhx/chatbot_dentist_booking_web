@@ -86,43 +86,43 @@ Or  <br>
 
 ### data design
  /api/\_\_init\__.py generate /api/data.json
- <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/data.png" width="50%" height="50%">
+ <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/data.png" width="50%" height="50%"></div>
 
 ## how to the website works
 run backend:
  python3 appiontment/app/demo/\_\_init\_\_.py
- <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/run_backend.png" width="50%" height="50%">
+ <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/run_backend.png" width="50%" height="50%"></div>
  
  run frontend:
  front/client.html
-  <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/run_frontend.png" width="50%" height="50%">
+  <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/run_frontend.png" width="50%" height="50%"></div>
 ### Bot Interaction
  It's a Rule based chatbot (/api/brain/rules.rive)
  The data rule based bot needed handled through the chatbot API which get needed data through dentists and timeslots API
  
  * basic greetings
-  <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/greeting.png" width="50%" height="50%">
+  <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/greeting.png" width="50%" height="50%"></div>
 
  * specific dentist information
-<div align=center> <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/ask_doctors.png" width="50%" height="50%">
+<div align=center> <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/ask_doctors.png" width="50%" height="50%"></div>
 
  * pick avaliable dentist
- <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avialable_dentists.png" width="50%" height="50%">
+ <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avialable_dentists.png" width="50%" height="50%"></div>
 
  * get available dates
- <div align=center> <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_dates.png" width="50%" height="50%">
+ <div align=center> <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_dates.png" width="50%" height="50%"></div>
 
  * get available timeslots
- <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_time.png" width="50%" height="50%">
+ <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_time.png" width="50%" height="50%"></div>
 
  * check a specific timeslot
-  <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/check_timeslots.png" width="50%" height="50%">
+  <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/check_timeslots.png" width="50%" height="50%"></div>
 
  * book an appointment
-   <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/book.png" width="50%" height="50%">
+   <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/book.png" width="50%" height="50%"></div>
 
  * confirm/cancel an appointment
-   <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/confirm:cancel.png" width="50%" height="50%">
+   <div align=center><img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/confirm:cancel.png" width="50%" height="50%"></div>
 
 
 
