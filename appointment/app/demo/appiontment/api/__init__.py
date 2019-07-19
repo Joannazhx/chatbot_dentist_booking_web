@@ -42,7 +42,7 @@ chioce_doctor_id = []
 # all dates next week
 for i in range (1,8) :
     date = (today + datetime.timedelta(days = i)).strftime('%d/%m')
-    print(date)
+    #print(date)
     dates.append(date)
 
 timeslots = []
@@ -78,7 +78,7 @@ for i in id_to_dentist:
         datetime[dates[j]] = slottime
     dentist_data['appointment'] = datetime
     data[i] = dentist_data
-    print(data)
+    #print(data)
 
 #write data json file
 with open('data.json','w') as outfile:
