@@ -86,7 +86,7 @@ Or  <br>
 
 ### data design
  /api/\_\_init\__.py generate /api/data.json
-![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/data.png)
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/data.png){:height="50%" width="50%"}
 
 
 ## how to the website works
