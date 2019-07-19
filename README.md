@@ -14,7 +14,7 @@ http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/run_backend.p
  It's a Rule based chatbot (/api/brain/rules.rive)
  The data rule based bot needed handled through the chatbot API which get needed data through dentists and timeslots API
  * basic greetings
-![readme_pic]((https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/greeting.png))
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/greeting.png)
  * specific dentist information
 ![readme_pic](http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/ask_doctors.png)
  * pick avaliable dentist
