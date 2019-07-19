@@ -41,7 +41,7 @@ run backend:
  /api/\_\_init\__.py generate /api/data.json
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/data.png)
 ### Restful API design
- * __Post__:appiontment /chatbots
+ * __Post__:appiontment /chatbots <br>
  Bot interaction
  Response body:
 {
