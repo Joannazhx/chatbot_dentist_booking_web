@@ -12,27 +12,35 @@ run backend:
 ### Bot Interaction
  It's a Rule based chatbot (/api/brain/rules.rive)
  The data rule based bot needed handled through the chatbot API which get needed data through dentists and timeslots API
+ 
  * basic greetings
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/greeting.png)
  * specific dentist information
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/ask_doctors.png)
+
  * pick avaliable dentist
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avialable_dentists.png)
+
  * get available dates
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_dates.png)
+
  * get available timeslots
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_time.png)
+
  * check a specific timeslot
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/check_timeslots.png)
+
  * book an appointment
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/book.png)
+
  * confirm/cancel an appointment
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/confirm:cancel.png)
+
 ## design
-###data design
+### data design
  /api/\_\_init\__.py generate /api/data.json
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/data.png)
-###Restful API design
+### Restful API design
  * __Post__:appiontment /chatbots
  Bot interaction
  Response body:
@@ -109,8 +117,8 @@ Or
 {
 &ensp;&ensp;"07/04 15:00-16:00": 
 &ensp;[
-&ensp;&ensp;&ensp;"available",
-&ensp;&ensp;&ensp;"None" 
+&ensp;&ensp;&ensp; "available",
+&ensp;&ensp;&ensp; "None" 
 &ensp;]
 }
 
