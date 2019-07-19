@@ -91,37 +91,37 @@ Or  <br>
 ## how to the website works
 run backend:
  python3 appiontment/app/demo/\_\_init\_\_.py
-![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/run_backend.png)
+ <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/run_backend.png" width="50%" height="50%">
  run frontend:
  front/client.html
-![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/run_frontend.png)
+  <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/run_frontend.png" width="50%" height="50%">
 ### Bot Interaction
  It's a Rule based chatbot (/api/brain/rules.rive)
  The data rule based bot needed handled through the chatbot API which get needed data through dentists and timeslots API
  
  * basic greetings
-![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/greeting.png)
+  <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/greeting.png" width="50%" height="50%">
+
  * specific dentist information
-![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/ask_doctors.png)
+ <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/ask_doctors.png" width="50%" height="50%">
 
  * pick avaliable dentist
-![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avialable_dentists.png)
+ <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avialable_dentists.png" width="50%" height="50%">
 
  * get available dates
-![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_dates.png)
+  <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_dates.png" width="50%" height="50%">
 
  * get available timeslots
-![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_time.png)
+ <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_time.png" width="50%" height="50%">
 
  * check a specific timeslot
-![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/check_timeslots.png)
+  <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/check_timeslots.png" width="50%" height="50%">
 
  * book an appointment
-![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/book.png)
+   <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/book.png" width="50%" height="50%">
 
  * confirm/cancel an appointment
-![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/confirm:cancel.png)
-
+   <img src="https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/confirm:cancel.png" width="50%" height="50%">
 
 
 
