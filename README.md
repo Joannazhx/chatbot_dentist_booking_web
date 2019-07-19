@@ -5,34 +5,33 @@
 
 run backend:
  python3 appiontment/app/demo/\_\_init\_\_.py
-![readme_pic](
-http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/run_backend.png)
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/run_backend.png)
  run frontend:
  front/client.html
-![readme_pic](http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/run_frontend.png)
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/run_frontend.png)
 ### Bot Interaction
  It's a Rule based chatbot (/api/brain/rules.rive)
  The data rule based bot needed handled through the chatbot API which get needed data through dentists and timeslots API
  * basic greetings
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/greeting.png)
  * specific dentist information
-![readme_pic](http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/ask_doctors.png)
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/ask_doctors.png)
  * pick avaliable dentist
-![readme_pic](http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/avialable_dentists.png)
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avialable_dentists.png)
  * get available dates
-![readme_pic](http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/avaliable_dates.png)
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_dates.png)
  * get available timeslots
-![readme_pic](http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/avaliable_time.png)
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/avaliable_time.png)
  * check a specific timeslot
-![readme_pic](http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/check_timeslots.png)
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/check_timeslots.png)
  * book an appointment
-![readme_pic](http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/book.png)
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/book.png)
  * confirm/cancel an appointment
-![readme_pic](http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/confirm:cancel.png)
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/confirm:cancel.png)
 ## design
 ###data design
  /api/\_\_init\__.py generate /api/data.json
-![readme_pic](http://github.com/Joannazhx/chatbot_dentist_booking_web/readme_pic/data.png)
+![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/data.png)
 ###Restful API design
  * __Post__:appiontment /chatbots
  Bot interaction
