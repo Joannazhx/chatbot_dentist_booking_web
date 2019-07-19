@@ -2,7 +2,6 @@
 ## description
  It's a chatbot website for booking dentists
 ## how to the website works
-
 run backend:
  python3 appiontment/app/demo/\_\_init\_\_.py
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/run_backend.png)
@@ -42,84 +41,84 @@ run backend:
 ![image](https://github.com/Joannazhx/chatbot_dentist_booking_web/blob/master/readme_pic/data.png)
 ### Restful API design
  * __Post__:appiontment /chatbots <br>
- Bot interaction
- Response body:
-{
-&ensp;&ensp;"messges": "hi bro" 
-}
- * __Get__: appiontment/dentists
- get all dentists' names
- Response body:
- [
-&ensp;&ensp;"Yogita Khasa",
-&ensp;&ensp;"Janani Ravichandran", "Nader Malik",
-&ensp;&ensp;"Jelena Skovrlj"
-]
+ Bot interaction <br>
+ Response body: <br>
+{ <br>
+&ensp;&ensp;"messges": "hi bro"  <br>
+} <br>
+ * __Get__: appiontment/dentists <br>
+ get all dentists' names <br>
+ Response body: <br>
+ [ <br>
+&ensp;&ensp;"Yogita Khasa", <br>
+&ensp;&ensp;"Janani Ravichandran", "Nader Malik", <br>
+&ensp;&ensp;"Jelena Skovrlj" <br>
+] <br>
 
- * __Get__: appointment/dentists/{id}
- get all information of a specific dentist
- Response body:
-[
-&ensp;{
-&ensp;&ensp;&ensp;"location": "Suite 4, Level 1 / 300,Barangaroo Avenue Barangaroo,NSW 2000",
-&ensp;&ensp;&ensp;"name": "Yogita Khasa",
-&ensp;&ensp;&ensp;"specialization": "Cosmetic Dentistry" 
-&ensp;}
-]
+ * __Get__: appointment/dentists/{id} <br>
+ get all information of a specific dentist <br>
+ Response body: <br>
+[ <br>
+&ensp;{ <br>
+&ensp;&ensp;&ensp;"location": "Suite 4, Level 1 / 300,Barangaroo Avenue Barangaroo,NSW 2000", <br>
+&ensp;&ensp;&ensp;"name": "Yogita Khasa", <br>
+&ensp;&ensp;&ensp;"specialization": "Cosmetic Dentistry" <br>
+&ensp;} <br>
+] <br>
 
- * __Get__: appiontment /timeslots/{id}
- Get available dates of the specific dentist
- Response body: 
- [
-&ensp;&ensp;"07/04", 
-&ensp;&ensp;"08/04", 
-&ensp;&ensp;"09/04", 
-&ensp;&ensp;"10/04", 
-&ensp;&ensp;"11/04", 
-&ensp;&ensp;"12/04",
-&ensp;&ensp;"13/04"
-]
+ * __Get__: appiontment /timeslots/{id} <br>
+ Get available dates of the specific dentist <br>
+ Response body: <br>
+ [ <br>
+&ensp;&ensp;"07/04", <br>
+&ensp;&ensp;"08/04", <br>
+&ensp;&ensp;"09/04", <br>
+&ensp;&ensp;"10/04", <br>
+&ensp;&ensp;"11/04", <br>
+&ensp;&ensp;"12/04",<br>
+&ensp;&ensp;"13/04"<br>
+] <br>
 
- * __Get__: appiontment /timeslots/{id}/{date}
- Get all available timeslots of the specific doctor in specific date
- [
-&ensp;&ensp;"10:00 - 11:00", 
-&ensp;&ensp;"14:00 - 15:00",
-&ensp;&ensp;"16:00 - 17:00" ]
+ * __Get__: appiontment /timeslots/{id}/{date} <br>
+ Get all available timeslots of the specific doctor in specific date <br>
+ [ <br>
+&ensp;&ensp;"10:00 - 11:00", <br>
+&ensp;&ensp;"14:00 - 15:00", <br>
+&ensp;&ensp;"16:00 - 17:00" ] <br>
 
- * __Get__: appiontment /timeslots/{id}/{date}/{timeslot}
- Check a specific timeslot is available or not
- Response body:
-[
-&ensp;&ensp;"booked",
-&ensp;&ensp;"Joe" 
-]
-Or 
-[
-&ensp;&ensp;"available",
-&ensp;&ensp;"None" 
-]
+ * __Get__: appiontment /timeslots/{id}/{date}/{timeslot} <br>
+ Check a specific timeslot is available or not <br>
+ Response body: <br>
+[ <br>
+&ensp;&ensp;"booked", <br>
+&ensp;&ensp;"Joe"  <br>
+] <br>
+Or  <br>
+[ <br>
+&ensp;&ensp;"available", <br>
+&ensp;&ensp;"None" <br>
+] <br>
 
- * __Post__:  appiontment /timeslots/{id}/{dates}/{timeslot}/{patient}/reserve
- book the appiontment
- Response body:
-{
-&ensp;&ensp;"07/04 15:00-16:00": 
-&ensp;[
-&ensp;&ensp;&ensp;"booked",
-&ensp;&ensp;&ensp;"Joe" 
-&ensp;]
-}
+ * __Post__:  appiontment /timeslots/{id}/{dates}/{timeslot}/{patient}/reserve <br>
+ book the appiontment <br>
+ Response body: <br>
+{ <br>
+&ensp;&ensp;"07/04 15:00-16:00":  <br>
+&ensp;[ <br>
+&ensp;&ensp;&ensp;"booked", <br>
+&ensp;&ensp;&ensp;"Joe"  <br>
+&ensp;] <br>
+} <br>
 
- * __Delete__:appointment/timeslots/{id}/{dates}/{timeslot}/{patient}/cancel
- cancel the booked timeslot appointment
-  Response body:
-{
-&ensp;&ensp;"07/04 15:00-16:00": 
-&ensp;[
-&ensp;&ensp;&ensp; "available",
-&ensp;&ensp;&ensp; "None" 
-&ensp;]
-}
+ * __Delete__:appointment/timeslots/{id}/{dates}/{timeslot}/{patient}/cancel <br>
+ cancel the booked timeslot appointment <br>
+  Response body: <br>
+{ <br>
+&ensp;&ensp;"07/04 15:00-16:00": <br>
+&ensp;[ <br>
+&ensp;&ensp;&ensp; "available", <br>
+&ensp;&ensp;&ensp; "None"  <br>
+&ensp;] <br>
+} <br>
 
 
